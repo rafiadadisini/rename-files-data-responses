@@ -8,23 +8,23 @@ function RenameResponses() {
   var files = folder.getFiles();
 
   while (files.hasNext()) {
-    var file = files.next();
+    let file = files.next();
     for (var i = 0; i < formResponses.length; i++) {
-      var formResponse = formResponses[i];
-      var itemResponses = formResponse.getItemResponses();
-      var itemResponseFirst = itemResponses[2];
-      var itemResponseSecond = itemResponses[3];
-      var itemResponseThird = itemResponses[1];
-      var itemResponsePhoto = itemResponses[8];
-      var photoID = itemResponsePhoto.getResponse();
-      var newName =
+      let formResponse = formResponses[i];
+      let itemResponses = formResponse.getItemResponses();
+      let itemResponseFirst = itemResponses[2];
+      let itemResponseSecond = itemResponses[3];
+      let itemResponseThird = itemResponses[1];
+      let itemResponsePhoto = itemResponses[8];
+      let photoID = itemResponsePhoto.getResponse();
+      let newName =
         itemResponseFirst.getResponse() +
         " " +
         itemResponseSecond.getResponse() +
         " - " +
         itemResponseThird.getResponse();
-      var url = baseString + photoID + endString;
-      var urlCheck = file.getUrl();
+      let url = baseString + photoID + endString;
+      let urlCheck = file.getUrl();
 
       if (url == urlCheck) {
         var modName = newName + ".jpg";
