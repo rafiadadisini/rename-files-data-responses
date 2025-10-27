@@ -27,7 +27,7 @@ function RenameResponses() {
       let urlCheck = file.getUrl();
 
       if (url == urlCheck) {
-        var modName = newName + ".jpg";
+        let modName = newName + ".jpg";
         file.setName(modName);
       }
     }
